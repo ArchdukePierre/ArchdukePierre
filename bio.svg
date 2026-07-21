@@ -1,0 +1,59 @@
+<svg width="850" height="420" viewBox="0 0 850 420" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#161d2b"/>
+      <stop offset="1" stop-color="#0e131e"/>
+    </linearGradient>
+    <radialGradient id="deep" cx="50%" cy="42%" r="55%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feComponentTransfer in="b" result="bd">
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="bd"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softglow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="850" height="420" fill="url(#bgGrad)"/>
+  <ellipse cx="425" cy="176" rx="420" ry="220" fill="url(#deep)"/>
+
+  <!-- Wordmark -->
+  <text x="426" y="178" text-anchor="middle" font-size="46" font-weight="500"
+        letter-spacing="11" fill="#dfe4ec" filter="url(#glow)">ArchdukePierre</text>
+
+  <!-- Subtitle -->
+  <text x="425" y="215" text-anchor="middle" font-size="12" font-weight="600"
+        letter-spacing="4.5" fill="#e9edf4">SENIOR ENGINEER&#160;&#160;·&#160;&#160;PIPE ORGAN BUILDER</text>
+
+  <!-- Languages -->
+  <text x="425" y="262" text-anchor="middle" font-size="11" font-weight="600"
+        letter-spacing="1.9" fill="#d3dae5">PYTHON&#160; ·&#160; JAVASCRIPT&#160; ·&#160; TYPESCRIPT&#160; ·&#160; JAVA&#160; ·&#160; C#&#160; ·&#160; C++&#160; ·&#160; C&#160; ·&#160; SQL&#160; ·&#160; GO&#160; ·&#160; RUST</text>
+  <text x="425" y="282" text-anchor="middle" font-size="11" font-weight="600"
+        letter-spacing="1.9" fill="#d3dae5">SWIFT&#160; ·&#160; KOTLIN&#160; ·&#160; PHP&#160; ·&#160; RUBY&#160; ·&#160; R&#160; ·&#160; DART&#160; ·&#160; LUA&#160; ·&#160; SCALA&#160; ·&#160; SHELL&#160; ·&#160; JULIA</text>
+
+  <!-- Two ghost buttons (LUMA homage) -->
+  <g filter="url(#softglow)">
+    <rect x="279" y="312" width="134" height="38" rx="2" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.4"/>
+    <text x="346" y="336" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="4" fill="#ffffff">SOFTWARE</text>
+    <rect x="437" y="312" width="154" height="38" rx="2" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.4"/>
+    <text x="514" y="336" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="4" fill="#ffffff">PIPE ORGANS</text>
+  </g>
+
+  <!-- Current work -->
+  <text x="425" y="382" text-anchor="middle" font-size="10.5" font-weight="600"
+        letter-spacing="2.2" fill="#b9c2d0">CURRENTLY&#160;&#160;THE CELLAR&#160;&#160;&#160;·&#160;&#160;&#160;ALSO,&#160;&#160;BARNSTORM&#160; ·&#160; OPERATOR&#160; ·&#160; VESPERGLOAM&#160;(MINECRAFT JAVA)</text>
+</svg>

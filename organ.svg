@@ -1,0 +1,259 @@
+<svg width="900" height="640" viewBox="0 0 900 640" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono','Fira Code',Consolas,'Courier New',monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c1220"/>
+      <stop offset="1" stop-color="#080c16"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5c6576"/>
+      <stop offset="0.22" stop-color="#cfd8e6"/>
+      <stop offset="0.45" stop-color="#eef3fa"/>
+      <stop offset="0.6" stop-color="#b9c3d3"/>
+      <stop offset="0.82" stop-color="#7c8698"/>
+      <stop offset="1" stop-color="#525b6b"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd27a" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ff7a18" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="wind" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#164e63" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0.5"/>
+    </linearGradient>
+    <radialGradient id="gaugeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.18"/>
+      <stop offset="70%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="blueprint" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#2dd4bf" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="640" fill="url(#bg)"/>
+  <rect x="0" y="0" width="900" height="640" fill="url(#blueprint)"/>
+
+  <text x="30" y="34" fill="#5eead4" font-size="13" letter-spacing="1.5" font-weight="600">PIPE ORGAN — MECHANICAL (TRACKER) ACTION</text>
+  <text x="30" y="52" fill="#4b5563" font-size="10.5" letter-spacing="1">LIVE CUTAWAY · WIND FLOWS FROM RESERVOIR ▸ CHEST ▸ PIPE</text>
+
+  <!-- ================= WIND SYSTEM (behind) ================= -->
+  <!-- Wind trunk duct: reservoir -> up left -> into chest -->
+  <path d="M150,590 L64,590 L64,410 L86,410" fill="none" stroke="#0f2b33" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M150,590 L64,590 L64,410 L86,410" fill="none" stroke="#155e6b" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M150,590 L64,590 L64,410 L86,410" fill="none" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" stroke-opacity="0.85" stroke-dasharray="6 26">
+    <animate attributeName="stroke-dashoffset" values="160;0" dur="1.4s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- ================= WIND CHEST ================= -->
+  <rect x="80" y="386" width="586" height="48" rx="4" fill="#141b2b" stroke="#37507a" stroke-width="1.5"/>
+  <!-- pressurized wind inside chest -->
+  <rect x="84" y="408" width="578" height="22" rx="2" fill="url(#wind)"/>
+  <rect x="84" y="408" width="578" height="22" rx="2" fill="#22d3ee" fill-opacity="0.06">
+    <animate attributeName="fill-opacity" values="0.05;0.11;0.05" dur="2.4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ================= KEYBOARD BED ================= -->
+  <rect x="76" y="560" width="590" height="10" rx="2" fill="#1c2536" stroke="#37507a" stroke-width="1"/>
+  <!-- black keys (decorative) -->
+  <g fill="#0b1220" stroke="#2a3550" stroke-width="0.8">
+    <rect x="156" y="520" width="16" height="28" rx="2"/>
+    <rect x="300" y="520" width="16" height="28" rx="2"/>
+    <rect x="372" y="520" width="16" height="28" rx="2"/>
+    <rect x="516" y="520" width="16" height="28" rx="2"/>
+    <rect x="588" y="520" width="16" height="28" rx="2"/>
+  </g>
+
+  <!-- ================= PIPES + ACTION (per note) ================= -->
+  <!-- P0 -->
+  <clipPath id="pb0"><rect x="108" y="132" width="24" height="228"/></clipPath>
+  <rect x="108" y="132" width="24" height="228" fill="#0a0f1a"/>
+  <g clip-path="url(#pb0)"><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.0475;0.0675;0.1225;0.1525;1" dur="8s" repeatCount="indefinite"/>
+    <rect x="109" y="140" width="22" height="212" fill="url(#glow)"/>
+    <ellipse cx="120" cy="350" rx="6" ry="10" fill="#fff3d6" opacity="0.85"><animate attributeName="cy" values="354;140" dur="0.9s" repeatCount="indefinite"/></ellipse>
+  </g></g>
+  <rect x="100" y="132" width="10" height="228" rx="4" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <rect x="130" y="132" width="10" height="228" rx="4" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <rect x="100" y="360" width="40" height="12" fill="#0e1420"/>
+  <line x1="100" y1="360" x2="140" y2="360" stroke="#e8eef7" stroke-width="1.5"/>
+  <polygon points="104,372 136,372 126,386 114,386" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <g opacity="0"><animate attributeName="opacity" values="0;0;0.9;0.9;0;0" keyTimes="0;0.0475;0.0675;0.1225;0.1525;1" dur="8s" repeatCount="indefinite"/>
+    <circle cx="120" cy="128" r="5" fill="none" stroke="#5eead4" stroke-width="2"><animate attributeName="r" values="4;20" dur="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="1.2s" repeatCount="indefinite"/></circle>
+    <circle cx="120" cy="128" r="5" fill="none" stroke="#5eead4" stroke-width="2"><animate attributeName="r" values="4;20" dur="1.2s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="1.2s" begin="0.6s" repeatCount="indefinite"/></circle>
+  </g>
+  <rect id="pallet0" x="105" y="424" width="30" height="5" rx="2" fill="#7c8698"><animateTransform attributeName="transform" type="rotate" values="0 105 426;0 105 426;-34 105 426;-34 105 426;0 105 426;0 105 426" keyTimes="0;0.0475;0.0675;0.1225;0.1525;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect id="track0" x="118" y="432" width="4" height="86" rx="2" fill="#8a6d3b"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 6;0 6;0 0;0 0" keyTimes="0;0.0475;0.0675;0.1225;0.1525;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect x="103" y="518" width="34" height="40" rx="3" fill="#eef2f7" stroke="#b6c0cf" stroke-width="1"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 5;0 5;0 0;0 0" keyTimes="0;0.0475;0.0675;0.1225;0.1525;1" dur="8s" repeatCount="indefinite"/></rect>
+
+  <!-- P1 -->
+  <clipPath id="pb1"><rect x="180" y="158" width="24" height="202"/></clipPath>
+  <rect x="180" y="158" width="24" height="202" fill="#0a0f1a"/>
+  <g clip-path="url(#pb1)"><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1288;0.1488;0.2038;0.2338;1" dur="8s" repeatCount="indefinite"/>
+    <rect x="181" y="166" width="22" height="186" fill="url(#glow)"/>
+    <ellipse cx="192" cy="350" rx="6" ry="10" fill="#fff3d6" opacity="0.85"><animate attributeName="cy" values="354;166" dur="0.9s" repeatCount="indefinite"/></ellipse>
+  </g></g>
+  <rect x="172" y="158" width="10" height="202" rx="4" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <rect x="202" y="158" width="10" height="202" rx="4" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <rect x="172" y="360" width="40" height="12" fill="#0e1420"/>
+  <line x1="172" y1="360" x2="212" y2="360" stroke="#e8eef7" stroke-width="1.5"/>
+  <polygon points="176,372 208,372 198,386 186,386" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <g opacity="0"><animate attributeName="opacity" values="0;0;0.9;0.9;0;0" keyTimes="0;0.1288;0.1488;0.2038;0.2338;1" dur="8s" repeatCount="indefinite"/>
+    <circle cx="192" cy="154" r="5" fill="none" stroke="#5eead4" stroke-width="2"><animate attributeName="r" values="4;20" dur="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="1.2s" repeatCount="indefinite"/></circle>
+  </g>
+  <rect x="177" y="424" width="30" height="5" rx="2" fill="#7c8698"><animateTransform attributeName="transform" type="rotate" values="0 177 426;0 177 426;-34 177 426;-34 177 426;0 177 426;0 177 426" keyTimes="0;0.1288;0.1488;0.2038;0.2338;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect x="190" y="432" width="4" height="86" rx="2" fill="#8a6d3b"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 6;0 6;0 0;0 0" keyTimes="0;0.1288;0.1488;0.2038;0.2338;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect x="175" y="518" width="34" height="40" rx="3" fill="#eef2f7" stroke="#b6c0cf" stroke-width="1"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 5;0 5;0 0;0 0" keyTimes="0;0.1288;0.1488;0.2038;0.2338;1" dur="8s" repeatCount="indefinite"/></rect>
+
+  <!-- P2 -->
+  <clipPath id="pb2"><rect x="252" y="182" width="24" height="178"/></clipPath>
+  <rect x="252" y="182" width="24" height="178" fill="#0a0f1a"/>
+  <g clip-path="url(#pb2)"><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.210;0.230;0.285;0.315;1" dur="8s" repeatCount="indefinite"/>
+    <rect x="253" y="190" width="22" height="162" fill="url(#glow)"/>
+    <ellipse cx="264" cy="350" rx="6" ry="10" fill="#fff3d6" opacity="0.85"><animate attributeName="cy" values="354;190" dur="0.9s" repeatCount="indefinite"/></ellipse>
+  </g></g>
+  <rect x="244" y="182" width="10" height="178" rx="4" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <rect x="274" y="182" width="10" height="178" rx="4" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <rect x="244" y="360" width="40" height="12" fill="#0e1420"/>
+  <line x1="244" y1="360" x2="284" y2="360" stroke="#e8eef7" stroke-width="1.5"/>
+  <polygon points="248,372 280,372 270,386 258,386" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <g opacity="0"><animate attributeName="opacity" values="0;0;0.9;0.9;0;0" keyTimes="0;0.210;0.230;0.285;0.315;1" dur="8s" repeatCount="indefinite"/>
+    <circle cx="264" cy="178" r="5" fill="none" stroke="#5eead4" stroke-width="2"><animate attributeName="r" values="4;20" dur="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="1.2s" repeatCount="indefinite"/></circle>
+  </g>
+  <rect x="249" y="424" width="30" height="5" rx="2" fill="#7c8698"><animateTransform attributeName="transform" type="rotate" values="0 249 426;0 249 426;-34 249 426;-34 249 426;0 249 426;0 249 426" keyTimes="0;0.210;0.230;0.285;0.315;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect x="262" y="432" width="4" height="86" rx="2" fill="#8a6d3b"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 6;0 6;0 0;0 0" keyTimes="0;0.210;0.230;0.285;0.315;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect x="247" y="518" width="34" height="40" rx="3" fill="#eef2f7" stroke="#b6c0cf" stroke-width="1"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 5;0 5;0 0;0 0" keyTimes="0;0.210;0.230;0.285;0.315;1" dur="8s" repeatCount="indefinite"/></rect>
+
+  <!-- P3 -->
+  <clipPath id="pb3"><rect x="324" y="204" width="24" height="156"/></clipPath>
+  <rect x="324" y="204" width="24" height="156" fill="#0a0f1a"/>
+  <g clip-path="url(#pb3)"><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2913;0.3113;0.3663;0.3963;1" dur="8s" repeatCount="indefinite"/>
+    <rect x="325" y="212" width="22" height="140" fill="url(#glow)"/>
+    <ellipse cx="336" cy="350" rx="6" ry="10" fill="#fff3d6" opacity="0.85"><animate attributeName="cy" values="354;212" dur="0.9s" repeatCount="indefinite"/></ellipse>
+  </g></g>
+  <rect x="316" y="204" width="10" height="156" rx="4" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <rect x="346" y="204" width="10" height="156" rx="4" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <rect x="316" y="360" width="40" height="12" fill="#0e1420"/>
+  <line x1="316" y1="360" x2="356" y2="360" stroke="#e8eef7" stroke-width="1.5"/>
+  <polygon points="320,372 352,372 342,386 330,386" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <g opacity="0"><animate attributeName="opacity" values="0;0;0.9;0.9;0;0" keyTimes="0;0.2913;0.3113;0.3663;0.3963;1" dur="8s" repeatCount="indefinite"/>
+    <circle cx="336" cy="200" r="5" fill="none" stroke="#5eead4" stroke-width="2"><animate attributeName="r" values="4;20" dur="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="1.2s" repeatCount="indefinite"/></circle>
+  </g>
+  <rect x="321" y="424" width="30" height="5" rx="2" fill="#7c8698"><animateTransform attributeName="transform" type="rotate" values="0 321 426;0 321 426;-34 321 426;-34 321 426;0 321 426;0 321 426" keyTimes="0;0.2913;0.3113;0.3663;0.3963;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect x="334" y="432" width="4" height="86" rx="2" fill="#8a6d3b"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 6;0 6;0 0;0 0" keyTimes="0;0.2913;0.3113;0.3663;0.3963;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect x="319" y="518" width="34" height="40" rx="3" fill="#eef2f7" stroke="#b6c0cf" stroke-width="1"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 5;0 5;0 0;0 0" keyTimes="0;0.2913;0.3113;0.3663;0.3963;1" dur="8s" repeatCount="indefinite"/></rect>
+
+  <!-- P4 -->
+  <clipPath id="pb4"><rect x="396" y="224" width="24" height="136"/></clipPath>
+  <rect x="396" y="224" width="24" height="136" fill="#0a0f1a"/>
+  <g clip-path="url(#pb4)"><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.3725;0.3925;0.4475;0.4775;1" dur="8s" repeatCount="indefinite"/>
+    <rect x="397" y="232" width="22" height="120" fill="url(#glow)"/>
+    <ellipse cx="408" cy="350" rx="6" ry="10" fill="#fff3d6" opacity="0.85"><animate attributeName="cy" values="354;232" dur="0.9s" repeatCount="indefinite"/></ellipse>
+  </g></g>
+  <rect x="388" y="224" width="10" height="136" rx="4" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <rect x="418" y="224" width="10" height="136" rx="4" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <rect x="388" y="360" width="40" height="12" fill="#0e1420"/>
+  <line x1="388" y1="360" x2="428" y2="360" stroke="#e8eef7" stroke-width="1.5"/>
+  <polygon points="392,372 424,372 414,386 402,386" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <g opacity="0"><animate attributeName="opacity" values="0;0;0.9;0.9;0;0" keyTimes="0;0.3725;0.3925;0.4475;0.4775;1" dur="8s" repeatCount="indefinite"/>
+    <circle cx="408" cy="220" r="5" fill="none" stroke="#5eead4" stroke-width="2"><animate attributeName="r" values="4;20" dur="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="1.2s" repeatCount="indefinite"/></circle>
+  </g>
+  <rect x="393" y="424" width="30" height="5" rx="2" fill="#7c8698"><animateTransform attributeName="transform" type="rotate" values="0 393 426;0 393 426;-34 393 426;-34 393 426;0 393 426;0 393 426" keyTimes="0;0.3725;0.3925;0.4475;0.4775;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect x="406" y="432" width="4" height="86" rx="2" fill="#8a6d3b"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 6;0 6;0 0;0 0" keyTimes="0;0.3725;0.3925;0.4475;0.4775;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect x="391" y="518" width="34" height="40" rx="3" fill="#eef2f7" stroke="#b6c0cf" stroke-width="1"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 5;0 5;0 0;0 0" keyTimes="0;0.3725;0.3925;0.4475;0.4775;1" dur="8s" repeatCount="indefinite"/></rect>
+
+  <!-- P5 -->
+  <clipPath id="pb5"><rect x="468" y="240" width="24" height="120"/></clipPath>
+  <rect x="468" y="240" width="24" height="120" fill="#0a0f1a"/>
+  <g clip-path="url(#pb5)"><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.4538;0.4738;0.5288;0.5588;1" dur="8s" repeatCount="indefinite"/>
+    <rect x="469" y="248" width="22" height="104" fill="url(#glow)"/>
+    <ellipse cx="480" cy="350" rx="6" ry="10" fill="#fff3d6" opacity="0.85"><animate attributeName="cy" values="354;248" dur="0.9s" repeatCount="indefinite"/></ellipse>
+  </g></g>
+  <rect x="460" y="240" width="10" height="120" rx="4" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <rect x="490" y="240" width="10" height="120" rx="4" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <rect x="460" y="360" width="40" height="12" fill="#0e1420"/>
+  <line x1="460" y1="360" x2="500" y2="360" stroke="#e8eef7" stroke-width="1.5"/>
+  <polygon points="464,372 496,372 486,386 474,386" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <g opacity="0"><animate attributeName="opacity" values="0;0;0.9;0.9;0;0" keyTimes="0;0.4538;0.4738;0.5288;0.5588;1" dur="8s" repeatCount="indefinite"/>
+    <circle cx="480" cy="236" r="5" fill="none" stroke="#5eead4" stroke-width="2"><animate attributeName="r" values="4;20" dur="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="1.2s" repeatCount="indefinite"/></circle>
+  </g>
+  <rect x="465" y="424" width="30" height="5" rx="2" fill="#7c8698"><animateTransform attributeName="transform" type="rotate" values="0 465 426;0 465 426;-34 465 426;-34 465 426;0 465 426;0 465 426" keyTimes="0;0.4538;0.4738;0.5288;0.5588;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect x="478" y="432" width="4" height="86" rx="2" fill="#8a6d3b"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 6;0 6;0 0;0 0" keyTimes="0;0.4538;0.4738;0.5288;0.5588;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect x="463" y="518" width="34" height="40" rx="3" fill="#eef2f7" stroke="#b6c0cf" stroke-width="1"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 5;0 5;0 0;0 0" keyTimes="0;0.4538;0.4738;0.5288;0.5588;1" dur="8s" repeatCount="indefinite"/></rect>
+
+  <!-- P6 -->
+  <clipPath id="pb6"><rect x="540" y="256" width="24" height="104"/></clipPath>
+  <rect x="540" y="256" width="24" height="104" fill="#0a0f1a"/>
+  <g clip-path="url(#pb6)"><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.535;0.555;0.610;0.640;1" dur="8s" repeatCount="indefinite"/>
+    <rect x="541" y="264" width="22" height="88" fill="url(#glow)"/>
+    <ellipse cx="552" cy="350" rx="6" ry="10" fill="#fff3d6" opacity="0.85"><animate attributeName="cy" values="354;264" dur="0.9s" repeatCount="indefinite"/></ellipse>
+  </g></g>
+  <rect x="532" y="256" width="10" height="104" rx="4" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <rect x="562" y="256" width="10" height="104" rx="4" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <rect x="532" y="360" width="40" height="12" fill="#0e1420"/>
+  <line x1="532" y1="360" x2="572" y2="360" stroke="#e8eef7" stroke-width="1.5"/>
+  <polygon points="536,372 568,372 558,386 546,386" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <g opacity="0"><animate attributeName="opacity" values="0;0;0.9;0.9;0;0" keyTimes="0;0.535;0.555;0.610;0.640;1" dur="8s" repeatCount="indefinite"/>
+    <circle cx="552" cy="252" r="5" fill="none" stroke="#5eead4" stroke-width="2"><animate attributeName="r" values="4;20" dur="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="1.2s" repeatCount="indefinite"/></circle>
+  </g>
+  <rect x="537" y="424" width="30" height="5" rx="2" fill="#7c8698"><animateTransform attributeName="transform" type="rotate" values="0 537 426;0 537 426;-34 537 426;-34 537 426;0 537 426;0 537 426" keyTimes="0;0.535;0.555;0.610;0.640;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect x="550" y="432" width="4" height="86" rx="2" fill="#8a6d3b"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 6;0 6;0 0;0 0" keyTimes="0;0.535;0.555;0.610;0.640;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect x="535" y="518" width="34" height="40" rx="3" fill="#eef2f7" stroke="#b6c0cf" stroke-width="1"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 5;0 5;0 0;0 0" keyTimes="0;0.535;0.555;0.610;0.640;1" dur="8s" repeatCount="indefinite"/></rect>
+
+  <!-- P7 -->
+  <clipPath id="pb7"><rect x="612" y="270" width="24" height="90"/></clipPath>
+  <rect x="612" y="270" width="24" height="90" fill="#0a0f1a"/>
+  <g clip-path="url(#pb7)"><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.6163;0.6363;0.6913;0.7213;1" dur="8s" repeatCount="indefinite"/>
+    <rect x="613" y="278" width="22" height="74" fill="url(#glow)"/>
+    <ellipse cx="624" cy="350" rx="6" ry="10" fill="#fff3d6" opacity="0.85"><animate attributeName="cy" values="354;278" dur="0.9s" repeatCount="indefinite"/></ellipse>
+  </g></g>
+  <rect x="604" y="270" width="10" height="90" rx="4" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <rect x="634" y="270" width="10" height="90" rx="4" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <rect x="604" y="360" width="40" height="12" fill="#0e1420"/>
+  <line x1="604" y1="360" x2="644" y2="360" stroke="#e8eef7" stroke-width="1.5"/>
+  <polygon points="608,372 640,372 630,386 618,386" fill="url(#metal)" stroke="#3a4252" stroke-width="0.8"/>
+  <g opacity="0"><animate attributeName="opacity" values="0;0;0.9;0.9;0;0" keyTimes="0;0.6163;0.6363;0.6913;0.7213;1" dur="8s" repeatCount="indefinite"/>
+    <circle cx="624" cy="266" r="5" fill="none" stroke="#5eead4" stroke-width="2"><animate attributeName="r" values="4;20" dur="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="1.2s" repeatCount="indefinite"/></circle>
+  </g>
+  <rect x="609" y="424" width="30" height="5" rx="2" fill="#7c8698"><animateTransform attributeName="transform" type="rotate" values="0 609 426;0 609 426;-34 609 426;-34 609 426;0 609 426;0 609 426" keyTimes="0;0.6163;0.6363;0.6913;0.7213;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect x="622" y="432" width="4" height="86" rx="2" fill="#8a6d3b"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 6;0 6;0 0;0 0" keyTimes="0;0.6163;0.6363;0.6913;0.7213;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect x="607" y="518" width="34" height="40" rx="3" fill="#eef2f7" stroke="#b6c0cf" stroke-width="1"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 5;0 5;0 0;0 0" keyTimes="0;0.6163;0.6363;0.6913;0.7213;1" dur="8s" repeatCount="indefinite"/></rect>
+
+  <!-- ================= RESERVOIR + FEEDER BELLOWS ================= -->
+  <!-- reservoir body -->
+  <rect x="110" y="588" width="180" height="34" rx="3" fill="#1a2233" stroke="#37507a" stroke-width="1.2"/>
+  <!-- reservoir top plate (rises/falls = breathing) -->
+  <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="2.4s" repeatCount="indefinite"/>
+    <rect x="112" y="582" width="176" height="8" rx="2" fill="#38507a"/>
+    <polygon points="112,590 130,600 112,600" fill="#233149"/>
+    <polygon points="288,590 270,600 288,600" fill="#233149"/>
+  </g>
+  <text x="200" y="614" text-anchor="middle" fill="#8aa0c0" font-size="9" letter-spacing="1">RESERVOIR</text>
+
+  <!-- ================= WIND PRESSURE GAUGE ================= -->
+  <circle cx="792" cy="150" r="70" fill="url(#gaugeGlow)"/>
+  <circle cx="792" cy="150" r="52" fill="#0e1626" stroke="#37507a" stroke-width="1.5"/>
+  <circle cx="792" cy="150" r="52" fill="none" stroke="#22d3ee" stroke-opacity="0.25" stroke-width="1"/>
+  <path d="M792,150 L792,108" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round">
+    <animateTransform attributeName="transform" type="rotate" values="-38 792 150;42 792 150;-10 792 150;30 792 150;-38 792 150" keyTimes="0;0.3;0.55;0.8;1" dur="8s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="792" cy="150" r="5" fill="#5eead4"/>
+  <text x="792" y="216" text-anchor="middle" fill="#8aa0c0" font-size="9.5" letter-spacing="1.5">WIND PRESSURE</text>
+  <text x="792" y="230" text-anchor="middle" fill="#4b5563" font-size="8.5">76 mm H₂O</text>
+
+  <!-- ================= LABELS ================= -->
+  <g fill="#7f93b0" font-size="10" letter-spacing="0.5">
+    <line x1="140" y1="180" x2="700" y2="90" stroke="#334155" stroke-width="0.8" stroke-dasharray="2 3"/>
+    <text x="705" y="93">FLUE PIPES · SPEAKING RANK</text>
+    <line x1="644" y1="366" x2="702" y2="330" stroke="#334155" stroke-width="0.8" stroke-dasharray="2 3"/>
+    <text x="705" y="333">PIPE MOUTH (where tone is voiced)</text>
+    <line x1="666" y1="410" x2="702" y2="400" stroke="#334155" stroke-width="0.8" stroke-dasharray="2 3"/>
+    <text x="705" y="403">WIND CHEST (pressurised)</text>
+    <line x1="639" y1="427" x2="702" y2="440" stroke="#334155" stroke-width="0.8" stroke-dasharray="2 3"/>
+    <text x="705" y="443">PALLET VALVE (opens on key)</text>
+    <line x1="626" y1="470" x2="702" y2="480" stroke="#334155" stroke-width="0.8" stroke-dasharray="2 3"/>
+    <text x="705" y="483">TRACKER (pulls pallet down)</text>
+    <line x1="641" y1="538" x2="702" y2="528" stroke="#334155" stroke-width="0.8" stroke-dasharray="2 3"/>
+    <text x="705" y="531">MANUAL · KEYS</text>
+    <line x1="70" y1="500" x2="70" y2="470" stroke="#334155" stroke-width="0.8" stroke-dasharray="2 3"/>
+    <text x="18" y="465">WIND TRUNK</text>
+    <text x="300" y="636" fill="#4b5563">FEEDER BELLOWS ↑ pumps air into reservoir</text>
+  </g>
+</svg>
